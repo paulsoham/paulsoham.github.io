@@ -13,7 +13,7 @@ if(vehicleNo) {
 		validityTill = stringToDateTime(validityTill);
 		//console.log("validityTill DATE: " + validityTill);
 		if(validityTill && validityTill < new Date()) {
-			addError('e-Challan Validity Expired!');
+			//addError('e-Challan Validity Expired!');
 		}
 		
 		for (const key in dataObj) {
@@ -23,11 +23,11 @@ if(vehicleNo) {
 		}
 	}
 	else {
-		addError('Invalid Vehicle No.!');
+		//addError('Invalid Vehicle No.!');
 	}
 }
 else {
-	addError('Vehicle No. not provided!');
+	//addError('Vehicle No. not provided!');
 }
 
 function stringToDateTime(dateTimeStr) { //SAMPLE: 21/10/2022 06:38 AM
@@ -45,14 +45,14 @@ function stringToDateTime(dateTimeStr) { //SAMPLE: 21/10/2022 06:38 AM
     }
 }
 
-function addError(strErrorMsg) {
-	let parent_container = document.getElementById('parentContainer');
-	let error_text = document.createElement("p");
-	error_text.setAttribute('class', 'error_text');
-    error_text.name = "error_text";
-	error_text.innerHTML = strErrorMsg;
-	parent_container.insertBefore(error_text, parent_container.children[1]);
-}
+// function addError(strErrorMsg) {
+// 	let parent_container = document.getElementById('parentContainer');
+// 	let error_text = document.createElement("p");
+// 	error_text.setAttribute('class', 'error_text');
+//     error_text.name = "error_text";
+// 	error_text.innerHTML = strErrorMsg;
+// 	parent_container.insertBefore(error_text, parent_container.children[1]);
+// }
 
 function addRow(strItemTitle, strItemValue) {
     let table = document.getElementById('item_table');
